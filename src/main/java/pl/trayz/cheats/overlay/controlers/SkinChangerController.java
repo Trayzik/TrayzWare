@@ -89,8 +89,7 @@ public class SkinChangerController implements Initializable {
 
     @SneakyThrows
     public void addToList(SkinChangerElement skinChanger) {
-        URL list = new File("src/main/java/pl/trayz/cheats/overlay/fxmls/skinchanger/SkinChangerList.fxml").toURI().toURL();
-        HBox hBox = FXMLLoader.load(list);
+        HBox hBox = FXMLLoader.load(getClass().getResource("/fxmls/skinchanger/SkinChangerList.fxml"));
         Label weaponType = (Label) hBox.getChildren().get(1);
         weaponType.setText(skinChanger.getWeapon().name());
         Label weaponName = (Label) hBox.getChildren().get(2);

@@ -45,8 +45,7 @@ public class Overlay extends Application {
         final int x = rect.left;
         final int y = rect.top;
 
-        URL url = new File("src/main/java/pl/trayz/cheats/overlay/fxmls/Layout.fxml").toURI().toURL();
-        Parent overlay = FXMLLoader.load(url);
+        Parent overlay = FXMLLoader.load(getClass().getResource("/fxmls/Layout.fxml"));
         Scene scene = new Scene(pane, width, height);
         primaryStage.setTitle("TrayzWare");
         primaryStage.initStyle(StageStyle.TRANSPARENT);

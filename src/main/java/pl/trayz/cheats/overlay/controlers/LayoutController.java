@@ -41,11 +41,8 @@ public class LayoutController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         if(location.getFile().contains("Layout.fxml")) {
-            URL leftBarUrl = new File("src/main/java/pl/trayz/cheats/overlay/fxmls/LeftBar.fxml").toURI().toURL();
-            leftBar.getChildren().add(FXMLLoader.load(leftBarUrl));
-
-            URL homePage = new File("src/main/java/pl/trayz/cheats/overlay/fxmls/Home.fxml").toURI().toURL();
-            mainPane.getChildren().add(FXMLLoader.load(homePage));
+            leftBar.getChildren().add(FXMLLoader.load(getClass().getResource("/fxmls/LeftBar.fxml")));
+            mainPane.getChildren().add(FXMLLoader.load(getClass().getResource("/fxmls/Home.fxml")));
             pane = mainPane;
         }
     }
@@ -58,13 +55,13 @@ public class LayoutController implements Initializable {
         Object source = event.getSource();
 
         if(source.equals(btnHome)) {
-            loadPage("src/main/java/pl/trayz/cheats/overlay/fxmls/Home.fxml");
+            loadPage("/fxmls/Home.fxml");
         }else if(source.equals(btnSkinChanger)) {
-            loadPage("src/main/java/pl/trayz/cheats/overlay/fxmls/skinchanger/SkinChanger.fxml");
+            loadPage("/fxmls/skinchanger/SkinChanger.fxml");
         }else if(source.equals(btnConfig)) {
-            loadPage("src/main/java/pl/trayz/cheats/overlay/fxmls/Configuration.fxml");
+            loadPage("/fxmls/Configuration.fxml");
         }else if(source.equals(btnCombat)) {
-            loadPage("src/main/java/pl/trayz/cheats/overlay/fxmls/combat/Combat.fxml");
+            loadPage("/fxmls/combat/Combat.fxml");
         }
     }
 
@@ -72,7 +69,7 @@ public class LayoutController implements Initializable {
     private void loadPage(String url) {
         URL fxml = new File(url).toURI().toURL();
         pane.getChildren().clear();
-        pane.getChildren().add(FXMLLoader.load(fxml));
+        pane.getChildren().add(FXMLLoader.load(getClass().getResource(url)));
     }
 
 }

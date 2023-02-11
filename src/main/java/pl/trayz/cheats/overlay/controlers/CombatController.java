@@ -32,7 +32,6 @@ public class CombatController implements Initializable {
 
     @SneakyThrows
     private AnchorPane getElement(final String name) {
-        URL element = new File("src/main/java/pl/trayz/cheats/overlay/fxmls/combat/"+name+".fxml").toURI().toURL();
-        return FXMLLoader.load(element);
+        return FXMLLoader.load(getClass().getResource("/fxmls/combat/"+name+".fxml"));
     }
 }
