@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="793.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.trayz.cheats.overlay.controlers.CombatController">
+    <Pane prefHeight="554.0" prefWidth="793.0">
+        <Pane fx:id="pnlOverview" prefHeight="554.0" prefWidth="793.0">
+            <Label layoutX="57.0" layoutY="25.0" text="Combat" textFill="#e7e5e5">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+            <ScrollPane hbarPolicy="NEVER" layoutX="14.0" layoutY="100.0" prefHeight="452.0" prefWidth="765.0" stylesheets="@../../styles.css">
+                <GridPane fx:id="pnItems" prefHeight="450.0" prefWidth="763.0" style="-fx-background-color: #02030A;">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </GridPane>
+            </ScrollPane>
+        </Pane>
+    </Pane>
+</AnchorPane>

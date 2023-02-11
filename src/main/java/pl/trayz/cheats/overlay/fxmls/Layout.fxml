@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0"
+            prefWidth="1050.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/16"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.trayz.cheats.overlay.controlers.LayoutController">
+    <effect>
+        <DropShadow color="#1b1eeb"/>
+    </effect>
+    <Pane fx:id="leftBar" prefHeight="465.0" prefWidth="254.0"/>
+    <StackPane layoutX="258.0" prefHeight="576.0" prefWidth="793.0" style="-fx-background-color: #02030A;">
+        <Pane fx:id="mainPane" prefHeight="554.0" prefWidth="793.0"/>
+    </StackPane>
+</AnchorPane>

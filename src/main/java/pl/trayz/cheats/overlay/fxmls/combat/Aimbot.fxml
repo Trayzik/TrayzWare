@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="itemC" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="231.0" prefWidth="302.0" style="-fx-background-color: #808080; -fx-background-radius: 5; -fx-background-insets: 0;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+    <effect>
+        <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0" />
+    </effect>
+    <Pane prefHeight="38.0" prefWidth="302.0" style="-fx-background-color: #5e5c5c; -fx-background-radius: 5; -fx-background-insets: 0;">
+        <Label layoutX="105.0" text="Aimbot" textFill="#e7e5e5">
+            <font>
+                <Font name="System Bold" size="26.0" />
+            </font>
+        </Label>
+    </Pane>
+   <CheckBox layoutX="14.0" layoutY="57.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="79.0" text="Enabled" />
+   <TextField layoutX="14.0" layoutY="116.0" prefHeight="25.0" prefWidth="115.0" />
+   <Label layoutX="14.0" layoutY="89.0" prefHeight="13.0" prefWidth="92.0" text="Bind" textFill="#e7e5e5">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+   <TextField layoutX="14.0" layoutY="178.0" prefHeight="25.0" prefWidth="115.0" />
+   <Label layoutX="14.0" layoutY="151.0" prefHeight="13.0" prefWidth="92.0" text="Delay (ms)" textFill="#e7e5e5">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+    <ComboBox fx:id="bone" layoutX="174.0" layoutY="89.0" prefHeight="27.0" prefWidth="114.0" />
+   <Label layoutX="174.0" layoutY="57.0" prefHeight="13.0" prefWidth="92.0" text="Body part" textFill="#e7e5e5">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+</AnchorPane>

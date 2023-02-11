@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="793.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.trayz.cheats.overlay.controlers.ConfigurationController">
+    <children>
+          <Pane prefHeight="554.0" prefWidth="793.0">
+              <children>
+                  <Pane fx:id="pnlOverview" prefHeight="554.0" prefWidth="793.0">
+                      <children>
+                          <Label layoutX="57.0" layoutY="25.0" text="Configuration" textFill="#e7e5e5">
+                              <font>
+                                  <Font size="24.0" />
+                              </font>
+                          </Label>
+                  <Button fx:id="loadConfig" layoutX="183.0" layoutY="163.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="35.0" prefWidth="203.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" text="Load configuraiton" textFill="WHITE" />
+                  <Button fx:id="saveConfig" layoutX="406.5" layoutY="163.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="35.0" prefWidth="203.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" text="Save configuraiton" textFill="WHITE" />
+                      </children>
+                  </Pane>
+              </children>
+          </Pane>
+    </children>
+</AnchorPane>
