@@ -16,6 +16,7 @@ import pl.trayz.cheats.TrayzWare;
 import pl.trayz.cheats.enums.Skins;
 import pl.trayz.cheats.enums.Team;
 import pl.trayz.cheats.enums.Weapons;
+import pl.trayz.cheats.mods.SkinChangerMod;
 import pl.trayz.cheats.objects.offsets.OffsetsManager;
 import pl.trayz.cheats.objects.skinchanger.SkinChangerElement;
 
@@ -51,8 +52,8 @@ public class SkinChangerController implements Initializable {
     @SneakyThrows
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        teamList.setItems(FXCollections.observableArrayList("CT","TT"));
-        teamList.setValue("CT");
+        teamList.setItems(FXCollections.observableArrayList("CT","TT","BOTH"));
+        teamList.setValue("BOTH");
 
         weaponType.setItems(FXCollections.observableArrayList(FXCollections.observableList(Arrays.stream(Weapons.values()).sorted(Comparator.comparing(Enum::toString)).collect(Collectors.toList()))));
         weaponType.setValue("AWP");
@@ -79,11 +80,11 @@ public class SkinChangerController implements Initializable {
                 }
             }
 
-            SkinChangerElement skinChanger = new SkinChangerElement(name, type, Team.valueOf(teamList.getValue().toString()), true);
+            SkinChangerElement skinChanger = new SkinChangerElement(name, type, teamList.getValue().equals("BOTH") ? Team.SPEC : Team.valueOf(teamList.getValue().toString()), true);
             TrayzWare.getInstance().getConfiguration().getSkinChanger().getSkins().add(skinChanger);
             addToList(skinChanger);
         }else if(event.getSource() == update) {
-            TrayzWare.getInstance().getProcess().writeInt(OffsetsManager.getOffset("dwClientState").getPointer(0).getAddress()+0x174,-1);
+            SkinChangerMod.updated = false;
         }
     }
 

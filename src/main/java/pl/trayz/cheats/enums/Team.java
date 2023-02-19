@@ -9,7 +9,7 @@ import java.util.Arrays;
 public enum Team {
 
     SPEC,
-    T,
+    TT,
     CT;
 
 

@@ -2,6 +2,7 @@ package pl.trayz.cheats.objects.entity;
 
 import lombok.Getter;
 import pl.trayz.cheats.TrayzWare;
+import pl.trayz.cheats.mods.SkinChangerMod;
 import pl.trayz.cheats.objects.offsets.OffsetsManager;
 
 import java.util.List;
