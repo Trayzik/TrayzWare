@@ -60,8 +60,8 @@ public class TrayzWare {
             new TriggerBotMod(),
             new FovMod(),
             new ChamsMod(),
-            new EspMod(),
-            new SkinChangerMod()
+            new EspMod()
+//            new SkinChangerMod()      Don't use, probably vacable
 
     );
 
