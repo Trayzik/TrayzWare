@@ -1,6 +1,5 @@
 package pl.trayz.cheats.mods.api;
 
-import lombok.Data;
 import org.jnativehook.keyboard.NativeKeyEvent;
 import org.jnativehook.mouse.NativeMouseEvent;
 import pl.trayz.cheats.TrayzWare;

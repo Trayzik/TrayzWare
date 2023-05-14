@@ -42,9 +42,7 @@ public class TrayzWare {
       *  Managers
     */
     private final OffsetsManager offsetsManager;
-    private final String gameDir;
     private final EntityManager entityManager;
-//    private BSPParser bspParser;
     private Configuration configuration;
 
     /*
@@ -61,8 +59,7 @@ public class TrayzWare {
             new FovMod(),
             new ChamsMod(),
             new EspMod()
-//            new SkinChangerMod()      Don't use, probably vacable
-
+//            new SkinChangerMod()
     );
 
     public TrayzWare() {
@@ -88,7 +85,6 @@ public class TrayzWare {
          *  Load managers
          */
         this.offsetsManager = new OffsetsManager();
-        this.gameDir = OffsetsManager.getOffset("dwGameDir").readString(0, 260);
         this.entityManager = new EntityManager();
         this.configuration = new Configuration();
         new NativeHookManager();
@@ -111,12 +107,8 @@ public class TrayzWare {
 
                 if (this.getGameState() != 6) {
                     this.entityManager.getEntities().clear();
-//                    TrayzWare.getInstance().setBspParser(null);
                     continue;
                 }
-
-//                if (TrayzWare.getInstance().getBspParser() == null)
-//                    TrayzWare.getInstance().setBspParser(new BSPParser(TrayzWare.getInstance().getGameDir() + "\\" + OffsetsManager.getOffset("dwClientState").getPointer(0).readString(OffsetsManager.getNetvar("dwClientState_MapDirectory"), 260)));
 
                 this.entityManager.updateEntities();
 

@@ -5,9 +5,9 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="257.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.trayz.cheats.overlay.controlers.LayoutController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="257.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.trayz.cheats.overlay.controlers.LayoutController">
     <VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="256.0" style="-fx-background-color: #05071F;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <ImageView fitHeight="73.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="73.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
             <VBox.margin>
                 <Insets bottom="10.0" top="50.0" />
             </VBox.margin>
@@ -36,7 +36,7 @@
                 <Insets left="50.0" />
             </padding>
         </Button>
-        <Button fx:id="btnCombat" onAction="#buttonClick" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../styles.css" text="Combat">
+        <Button fx:id="btnCombat" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="42.0" prefWidth="259.0" stylesheets="@../styles.css" text="Combat">
             <graphic>
                 <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -48,7 +48,7 @@
                 <Insets left="50.0" />
             </padding>
         </Button>
-        <Button fx:id="btnVisuals" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../styles.css" text="Visuals">
+        <Button fx:id="btnVisuals" onAction="#buttonClick" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../styles.css" text="Visuals">
             <graphic>
                 <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -60,7 +60,7 @@
                 <Insets left="50.0" />
             </padding>
         </Button>
-        <Button fx:id="btnMisc" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../styles.css" text="Misc">
+        <Button fx:id="btnMisc" onAction="#buttonClick" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../styles.css" text="Misc">
             <graphic>
                 <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -72,7 +72,7 @@
                 <Insets left="50.0" />
             </padding>
         </Button>
-        <Button fx:id="btnSkinChanger" onAction="#buttonClick" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../styles.css" text="SkinChanger">
+        <Button fx:id="btnSkinChanger" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="42.0" prefWidth="259.0" stylesheets="@../styles.css" text="SkinChanger">
             <graphic>
                 <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -84,7 +84,7 @@
                 <Insets left="50.0" />
             </padding>
         </Button>
-        <Button fx:id="btnPlayers" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../styles.css" text="Players">
+        <Button fx:id="btnPlayers" onAction="#buttonClick" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../styles.css" text="Players">
             <graphic>
                 <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -96,7 +96,7 @@
                 <Insets left="50.0" />
             </padding>
         </Button>
-        <Button fx:id="btnConfig" onAction="#buttonClick" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../styles.css" text="Config">
+        <Button fx:id="btnConfig" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="42.0" prefWidth="259.0" stylesheets="@../styles.css" text="Config">
             <graphic>
                 <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                     <image>

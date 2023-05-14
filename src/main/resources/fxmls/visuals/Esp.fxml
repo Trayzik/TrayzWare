@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="itemC" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="157.0" prefWidth="302.0" style="-fx-background-color: #808080; -fx-background-radius: 5; -fx-background-insets: 0;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.trayz.cheats.overlay.controlers.visuals.EspController">
+    <effect>
+        <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0" />
+    </effect>
+    <Pane prefHeight="38.0" prefWidth="302.0" style="-fx-background-color: #5e5c5c; -fx-background-radius: 5; -fx-background-insets: 0;">
+        <Label layoutX="114.0" prefHeight="38.0" prefWidth="115.0" text="Esp" textFill="#e7e5e5">
+            <font>
+                <Font name="System Bold" size="26.0" />
+            </font>
+        </Label>
+    </Pane>
+   <CheckBox fx:id="enabled" layoutX="14.0" layoutY="57.0" mnemonicParsing="false" onAction="#onAction" prefHeight="27.0" prefWidth="79.0" text="Enabled" />
+   <ColorPicker fx:id="color" layoutX="14.0" layoutY="116.0" onAction="#onAction" prefHeight="25.0" prefWidth="115.0" />
+   <Label layoutX="14.0" layoutY="89.0" prefHeight="27.0" prefWidth="115.0" text="Border color" textFill="#e7e5e5">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+   <CheckBox fx:id="showHP" layoutX="174.0" layoutY="49.0" mnemonicParsing="false" onAction="#onAction" prefHeight="45.0" prefWidth="115.0" text="Show HP" textFill="#226f0b" />
+   <Label layoutX="171.0" layoutY="89.0" prefHeight="27.0" prefWidth="121.0" text="Hp bar size" textFill="#e7e5e5">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+   <Spinner fx:id="hpSize" layoutX="171.0" layoutY="116.0" prefHeight="25.0" prefWidth="79.0" />
+</AnchorPane>

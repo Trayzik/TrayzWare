@@ -29,6 +29,7 @@ public class Configuration {
     private final List<String> enabledMods;
     private final AntiFlash antiFlash;
     private final Glow glow;
+    private final Esp esp;
     private final Chams chams;
     private final Aimbot aimbot;
     private final TriggerBot triggerBot;
@@ -39,10 +40,11 @@ public class Configuration {
         this.enabledMods = new CopyOnWriteArrayList<>();
         this.antiFlash = new AntiFlash(0f);
         this.glow = new Glow(new ColorUtil(Color.WHITE),new ColorUtil(Color.GREEN),true,true);
+        this.esp = new Esp(new ColorUtil(Color.WHITE),true, 3);
         this.chams = new Chams(new ColorUtil(Color.RED),new ColorUtil(Color.GREEN),true,false);
         this.aimbot = new Aimbot(50,5,56,Bone.HEAD);
         this.triggerBot = new TriggerBot(0,-1);
-        this.fov = new Fov(90);
+        this.fov = new Fov(120);
         this.skinChanger = new SkinChanger(new ArrayList<>());
     }
 
@@ -87,6 +89,14 @@ public class Configuration {
 
         private boolean glowOnEnemy;
         private boolean glowOnTeammate;
+    }
+
+    @AllArgsConstructor@Data
+    public static class Esp {
+        private ColorUtil borderColor;
+
+        private boolean showHp;
+        private int hpBarSize;
     }
 
     @AllArgsConstructor@Data

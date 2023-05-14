@@ -85,18 +85,18 @@ public class EspMod extends Modification {
         box.setWidth(width/2);
         box.setHeight(height);
         box.setFill(Color.TRANSPARENT);
-        box.setStroke(Color.WHITE);
+        box.setStroke(Color.rgb(this.configuration().getEsp().getBorderColor().getRed(),this.configuration().getEsp().getBorderColor().getGreen(),this.configuration().getEsp().getBorderColor().getBlue()));
         box.setVisible(true);
 
         double calculation = (0.01 * height) * entity.getHealth();
         line.setStartX(topPos.getX() - width / 1.6f + (width/2) - 5);
         line.setEndX(topPos.getX() - width / 1.6f + (width/2) - 5);
-        line.setStrokeWidth(3);
+        line.setStrokeWidth(this.configuration().getEsp().getHpBarSize());
         line.setStartY(topPos.getY() + height);
         line.setEndY(topPos.getY() + (height-calculation));
         line.setFill(Color.TRANSPARENT);
-        line.setStroke(entity.getHealth() >= 50 ? Color.GREEN : entity.getHealth()<50 && entity.getHealth()> 25 ? Color.ORANGE : Color.RED);
-        line.setVisible(true);
+        line.setStroke(entity.getHealth() >= 50 ? Color.GREEN : entity.getHealth()> 25 ? Color.ORANGE : Color.RED);
+        line.setVisible(this.configuration().getEsp().isShowHp());
 
         if (Overlay.pane != null) {
             Pane finalPane = pane;

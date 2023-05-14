@@ -33,6 +33,12 @@ public class LayoutController implements Initializable {
 
     @FXML
     private Button btnCombat;
+    @FXML
+    private Button btnMisc;
+    @FXML
+    private Button btnVisuals;
+    @FXML
+    private Button btnPlayers;
 
     public static Pane pane;
 
@@ -62,12 +68,17 @@ public class LayoutController implements Initializable {
             loadPage("/fxmls/Configuration.fxml");
         }else if(source.equals(btnCombat)) {
             loadPage("/fxmls/combat/Combat.fxml");
+        }else if(source.equals(btnMisc)) {
+            loadPage("/fxmls/misc/Misc.fxml");
+        }else if(source.equals(btnVisuals)) {
+            loadPage("/fxmls/visuals/Visuals.fxml");
+        }else if(source.equals(btnPlayers)) {
+            loadPage("/fxmls/players/Players.fxml");
         }
     }
 
     @SneakyThrows
     private void loadPage(String url) {
-        URL fxml = new File(url).toURI().toURL();
         pane.getChildren().clear();
         pane.getChildren().add(FXMLLoader.load(getClass().getResource(url)));
     }

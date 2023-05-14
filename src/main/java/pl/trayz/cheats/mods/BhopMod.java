@@ -6,8 +6,6 @@ import pl.trayz.cheats.mods.api.Modification;
 import pl.trayz.cheats.objects.entity.LocalPlayer;
 import pl.trayz.cheats.objects.offsets.OffsetsManager;
 
-import java.io.File;
-
 /**
  * @Author: Trayz
  **/

@@ -16,7 +16,6 @@ public class MathHelper {
         return a;
     }
 
-
     public static float vecToAngle(Vec2f vec) {
         return (float)Math.toDegrees(Math.atan2(vec.y, vec.x));
     }

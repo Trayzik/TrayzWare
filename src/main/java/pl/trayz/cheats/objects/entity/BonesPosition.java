@@ -1,7 +1,6 @@
 package pl.trayz.cheats.objects.entity;
 
 import com.sun.jna.platform.win32.Win32Exception;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import pl.trayz.cheats.enums.Bone;

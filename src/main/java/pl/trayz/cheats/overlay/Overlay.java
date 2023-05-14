@@ -13,9 +13,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import pl.trayz.cheats.TrayzWare;
 
-import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 
 /**
  * @Author: Trayz

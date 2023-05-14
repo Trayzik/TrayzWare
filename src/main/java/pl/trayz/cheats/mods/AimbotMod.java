@@ -7,8 +7,6 @@ import pl.trayz.cheats.mods.api.Modification;
 import pl.trayz.cheats.objects.entity.BonesPosition;
 import pl.trayz.cheats.objects.entity.Entity;
 import pl.trayz.cheats.objects.entity.LocalPlayer;
-import pl.trayz.cheats.objects.memory.Pointer;
-import pl.trayz.cheats.objects.offsets.OffsetsManager;
 import pl.trayz.cheats.utils.MathHelper;
 import pl.trayz.cheats.utils.Utils;
 import pl.trayz.cheats.utils.vec.Vec2f;

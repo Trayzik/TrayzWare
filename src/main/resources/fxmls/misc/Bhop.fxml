@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="itemC" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="108.0" prefWidth="148.0" style="-fx-background-color: #808080; -fx-background-radius: 5; -fx-background-insets: 0;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.trayz.cheats.overlay.controlers.misc.BhopController">
+    <effect>
+        <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0" />
+    </effect>
+    <Pane prefHeight="38.0" prefWidth="148.0" style="-fx-background-color: #5e5c5c; -fx-background-radius: 5; -fx-background-insets: 0;">
+        <Label layoutX="45.0" prefHeight="38.0" prefWidth="102.0" text="Bhop" textFill="#e7e5e5">
+            <font>
+                <Font name="System Bold" size="26.0" />
+            </font>
+        </Label>
+    </Pane>
+   <CheckBox fx:id="enabled" layoutX="14.0" layoutY="57.0" mnemonicParsing="false" onAction="#onAction" prefHeight="27.0" prefWidth="79.0" text="Enabled" />
+</AnchorPane>

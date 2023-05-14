@@ -5,10 +5,10 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="793.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.trayz.cheats.overlay.controlers.combat.CombatController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="793.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.trayz.cheats.overlay.controlers.visuals.VisualsController">
     <Pane prefHeight="554.0" prefWidth="793.0">
         <Pane fx:id="pnlOverview" prefHeight="554.0" prefWidth="793.0">
-            <Label layoutX="57.0" layoutY="25.0" text="Combat" textFill="#e7e5e5">
+            <Label layoutX="57.0" layoutY="25.0" text="Visuals" textFill="#e7e5e5">
                 <font>
                     <Font size="24.0" />
                 </font>

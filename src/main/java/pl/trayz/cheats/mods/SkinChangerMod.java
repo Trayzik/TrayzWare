@@ -1,9 +1,7 @@
 package pl.trayz.cheats.mods;
 
-import org.jnativehook.keyboard.NativeKeyEvent;
 import pl.trayz.cheats.TrayzWare;
 import pl.trayz.cheats.enums.Team;
-import pl.trayz.cheats.enums.Weapons;
 import pl.trayz.cheats.mods.api.Modification;
 import pl.trayz.cheats.objects.entity.LocalPlayer;
 import pl.trayz.cheats.objects.offsets.OffsetsManager;
@@ -15,6 +13,10 @@ import pl.trayz.cheats.objects.skinchanger.SkinChangerElement;
  * @Author: Trayz
  **/
 
+/*
+ Detected by VAC
+ DON"T USE IT!!!!!
+ */
 public class SkinChangerMod extends Modification {
 
     public SkinChangerMod() {

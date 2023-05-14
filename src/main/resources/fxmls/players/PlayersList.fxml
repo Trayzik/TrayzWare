@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox fx:id="itemC" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="695.0" spacing="80.0" style="-fx-background-color: #02030A; -fx-background-radius: 5; -fx-background-insets: 0;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <ImageView fitHeight="31.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../images/icons8_GPS_Antenna_64px_1.png" />
+            </image>
+            <HBox.margin>
+                <Insets left="10.0" />
+            </HBox.margin>
+        </ImageView>
+        <Label fx:id="weaponType" text="Trayz" textFill="#b7c3d7" />
+        <Label text="CT" textFill="#b7c3d7">
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+        </Label>
+        <Label text="Silver 1" textFill="#b7c3d7">
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+        </Label>
+      <Label layoutX="327.0" layoutY="28.0" text="100hp" textFill="#b7c3d7" />
+    </children>
+    <effect>
+        <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0" />
+    </effect>
+</HBox>
