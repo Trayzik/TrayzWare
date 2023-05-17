@@ -17,6 +17,7 @@ import java.util.ResourceBundle;
 /**
  * @Author: Trayz
  **/
+
 public class EspController implements Initializable {
 
     @FXML
@@ -28,31 +29,28 @@ public class EspController implements Initializable {
     @FXML
     private Spinner hpSize;
 
+    private final Configuration configuration = TrayzWare.getInstance().getConfiguration();
+    private final Configuration.Esp esp = this.configuration.getEsp();
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Configuration configuration = TrayzWare.getInstance().getConfiguration();
-        Configuration.Esp esp = configuration.getEsp();
+        java.awt.Color color = this.esp.getBorderColor().getColor();
 
-        java.awt.Color color = esp.getBorderColor().getColor();
-
-        this.enabled.setSelected(configuration.getEnabledMods().contains("esp"));
+        this.enabled.setSelected(this.configuration.getEnabledMods().contains("esp"));
         this.color.setValue(Color.rgb(color.getRed(),color.getGreen(),color.getBlue()));
-        this.showHP.setSelected(esp.isShowHp());
-        this.hpSize.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 10, esp.getHpBarSize()));
+        this.showHP.setSelected(this.esp.isShowHp());
+        this.hpSize.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 10, this.esp.getHpBarSize()));
     }
 
     public void onAction() {
-        Configuration configuration = TrayzWare.getInstance().getConfiguration();
-        Configuration.Esp esp = configuration.getEsp();
-
         if(!this.enabled.isSelected()) {
-            configuration.getEnabledMods().remove("esp");
+            this.configuration.getEnabledMods().remove("esp");
         }else {
-            configuration.getEnabledMods().add("esp");
+            this.configuration.getEnabledMods().add("esp");
         }
 
-        esp.setBorderColor(new ColorUtil(new java.awt.Color((int) (this.color.getValue().getRed() * 255), (int) (this.color.getValue().getGreen() * 255), (int) (this.color.getValue().getBlue() * 255))));
-        esp.setShowHp(this.showHP.isSelected());
-        esp.setHpBarSize((int) this.hpSize.getValue());
+        this.esp.setBorderColor(new ColorUtil(new java.awt.Color((int) (this.color.getValue().getRed() * 255), (int) (this.color.getValue().getGreen() * 255), (int) (this.color.getValue().getBlue() * 255))));
+        this.esp.setShowHp(this.showHP.isSelected());
+        this.esp.setHpBarSize((int) this.hpSize.getValue());
     }
 }

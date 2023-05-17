@@ -18,27 +18,24 @@ public class FovController implements Initializable {
     @FXML
     private CheckBox enabled;
     @FXML
-    private TextField fov;
+    private TextField fovField;
+
+    private final Configuration configuration = TrayzWare.getInstance().getConfiguration();
+    private final Configuration.Fov fov = this.configuration.getFov();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Configuration configuration = TrayzWare.getInstance().getConfiguration();
-        Configuration.Fov fov = configuration.getFov();
-
-        this.enabled.setSelected(configuration.getEnabledMods().contains("fov"));
-        this.fov.setText(String.valueOf(fov.getFov()));
+        this.enabled.setSelected(this.configuration.getEnabledMods().contains("fov"));
+        this.fovField.setText(String.valueOf(this.fov.getFov()));
     }
 
     public void onAction() {
-        Configuration configuration = TrayzWare.getInstance().getConfiguration();
-        Configuration.Fov fov = configuration.getFov();
-
         if(!this.enabled.isSelected()) {
-            configuration.getEnabledMods().remove("fov");
+            this.configuration.getEnabledMods().remove("fov");
         }else {
-            configuration.getEnabledMods().add("fov");
+            this.configuration.getEnabledMods().add("fov");
         }
 
-        fov.setFov(Integer.parseInt(this.fov.getText().replaceAll("\\D", "")));
+        this.fov.setFov(Integer.parseInt(this.fovField.getText().replaceAll("\\D", "")));
     }
 }

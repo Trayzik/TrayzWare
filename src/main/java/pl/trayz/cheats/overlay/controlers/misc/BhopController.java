@@ -18,20 +18,18 @@ public class BhopController implements Initializable {
     @FXML
     private CheckBox enabled;
 
+    private final Configuration configuration = TrayzWare.getInstance().getConfiguration();
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Configuration configuration = TrayzWare.getInstance().getConfiguration();
-
-        this.enabled.setSelected(configuration.getEnabledMods().contains("bhop"));
+        this.enabled.setSelected(this.configuration.getEnabledMods().contains("bhop"));
     }
 
     public void onAction() {
-        Configuration configuration = TrayzWare.getInstance().getConfiguration();
-
         if(!this.enabled.isSelected()) {
-            configuration.getEnabledMods().remove("bhop");
+            this.configuration.getEnabledMods().remove("bhop");
         }else {
-            configuration.getEnabledMods().add("bhop");
+            this.configuration.getEnabledMods().add("bhop");
         }
     }
 }

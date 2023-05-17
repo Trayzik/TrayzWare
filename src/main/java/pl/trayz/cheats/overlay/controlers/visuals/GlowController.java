@@ -28,34 +28,31 @@ public class GlowController implements Initializable {
     @FXML
     private CheckBox glowTeam;
 
+    private final Configuration configuration = TrayzWare.getInstance().getConfiguration();
+    private final Configuration.Glow glow = this.configuration.getGlow();
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Configuration configuration = TrayzWare.getInstance().getConfiguration();
-        Configuration.Glow glow = configuration.getGlow();
+        java.awt.Color colorEnemy = this.glow.getEnemyColor().getColor();
+        java.awt.Color colorTeam = this.glow.getTeammateColor().getColor();
 
-        java.awt.Color colorEnemy = glow.getEnemyColor().getColor();
-        java.awt.Color colorTeam = glow.getTeammateColor().getColor();
-
-        this.enabled.setSelected(configuration.getEnabledMods().contains("glow"));
+        this.enabled.setSelected(this.configuration.getEnabledMods().contains("glow"));
         this.colorEnemy.setValue(Color.rgb(colorEnemy.getRed(),colorEnemy.getGreen(),colorEnemy.getBlue()));
         this.colorTeam.setValue(Color.rgb(colorTeam.getRed(),colorTeam.getGreen(),colorTeam.getBlue()));
-        this.glowEnemy.setSelected(glow.isGlowOnEnemy());
-        this.glowTeam.setSelected(glow.isGlowOnTeammate());
+        this.glowEnemy.setSelected(this.glow.isGlowOnEnemy());
+        this.glowTeam.setSelected(this.glow.isGlowOnTeammate());
     }
 
     public void onAction() {
-        Configuration configuration = TrayzWare.getInstance().getConfiguration();
-        Configuration.Glow glow = configuration.getGlow();
-
         if(!this.enabled.isSelected()) {
-            configuration.getEnabledMods().remove("glow");
+            this.configuration.getEnabledMods().remove("glow");
         }else {
-            configuration.getEnabledMods().add("glow");
+            this.configuration.getEnabledMods().add("glow");
         }
 
-        glow.setEnemyColor(new ColorUtil(new java.awt.Color((int) (this.colorEnemy.getValue().getRed() * 255), (int) (this.colorEnemy.getValue().getGreen() * 255), (int) (this.colorEnemy.getValue().getBlue() * 255))));
-        glow.setTeammateColor(new ColorUtil(new java.awt.Color((int) (this.colorTeam.getValue().getRed() * 255), (int) (this.colorTeam.getValue().getGreen() * 255), (int) (this.colorTeam.getValue().getBlue() * 255))));
-        glow.setGlowOnEnemy(this.glowEnemy.isSelected());
-        glow.setGlowOnTeammate(this.glowTeam.isSelected());
+        this.glow.setEnemyColor(new ColorUtil(new java.awt.Color((int) (this.colorEnemy.getValue().getRed() * 255), (int) (this.colorEnemy.getValue().getGreen() * 255), (int) (this.colorEnemy.getValue().getBlue() * 255))));
+        this.glow.setTeammateColor(new ColorUtil(new java.awt.Color((int) (this.colorTeam.getValue().getRed() * 255), (int) (this.colorTeam.getValue().getGreen() * 255), (int) (this.colorTeam.getValue().getBlue() * 255))));
+        this.glow.setGlowOnEnemy(this.glowEnemy.isSelected());
+        this.glow.setGlowOnTeammate(this.glowTeam.isSelected());
     }
 }

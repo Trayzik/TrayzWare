@@ -13,6 +13,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import lombok.SneakyThrows;
 import pl.trayz.cheats.TrayzWare;
+import pl.trayz.cheats.configuration.Configuration;
 import pl.trayz.cheats.enums.Skins;
 import pl.trayz.cheats.enums.Team;
 import pl.trayz.cheats.enums.Weapons;
@@ -49,6 +50,9 @@ public class SkinChangerController implements Initializable {
     @FXML
     private Button update;
 
+    private final Configuration configuration = TrayzWare.getInstance().getConfiguration();
+    private final Configuration.SkinChanger skinChanger = this.configuration.getSkinChanger();
+
     @SneakyThrows
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -62,7 +66,7 @@ public class SkinChangerController implements Initializable {
         weaponName.setValue("Dragon_Lore");
 
         //LOAD SKINS FROM CFG
-        for(SkinChangerElement skins : TrayzWare.getInstance().getConfiguration().getSkinChanger().getSkins()) {
+        for(SkinChangerElement skins : this.skinChanger.getSkins()) {
             addToList(skins);
         }
 
@@ -74,14 +78,14 @@ public class SkinChangerController implements Initializable {
             Weapons type = Weapons.valueOf(weaponType.getValue().toString());
             Skins name = Skins.valueOf(weaponName.getValue().toString());
 
-            for(SkinChangerElement skins : TrayzWare.getInstance().getConfiguration().getSkinChanger().getSkins()) {
+            for(SkinChangerElement skins : this.skinChanger.getSkins()) {
                 if (skins.getTeam().equals(teamList.getValue()) && skins.getWeapon().equals(type) && skins.getSkin().equals(name)) {
                     return;
                 }
             }
 
             SkinChangerElement skinChanger = new SkinChangerElement(name, type, teamList.getValue().equals("BOTH") ? Team.SPEC : Team.valueOf(teamList.getValue().toString()), true);
-            TrayzWare.getInstance().getConfiguration().getSkinChanger().getSkins().add(skinChanger);
+            this.skinChanger.getSkins().add(skinChanger);
             addToList(skinChanger);
         }else if(event.getSource() == update) {
             SkinChangerMod.updated = false;

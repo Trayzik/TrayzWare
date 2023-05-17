@@ -20,25 +20,22 @@ public class AntiFlashController implements Initializable {
     @FXML
     private TextField alpha;
 
+    private final Configuration configuration = TrayzWare.getInstance().getConfiguration();
+    private final Configuration.AntiFlash antiFlash = this.configuration.getAntiFlash();
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Configuration configuration = TrayzWare.getInstance().getConfiguration();
-        Configuration.AntiFlash antiFlash = configuration.getAntiFlash();
-
-        this.enabled.setSelected(configuration.getEnabledMods().contains("antiflash"));
-        this.alpha.setText(String.valueOf(antiFlash.getAlpha()));
+        this.enabled.setSelected(this.configuration.getEnabledMods().contains("antiflash"));
+        this.alpha.setText(String.valueOf(this.antiFlash.getAlpha()));
     }
 
     public void onAction() {
-        Configuration configuration = TrayzWare.getInstance().getConfiguration();
-        Configuration.AntiFlash antiFlash = configuration.getAntiFlash();
-
         if(!this.enabled.isSelected()) {
-            configuration.getEnabledMods().remove("antiflash");
+            this.configuration.getEnabledMods().remove("antiflash");
         }else {
-            configuration.getEnabledMods().add("antiflash");
+            this.configuration.getEnabledMods().add("antiflash");
         }
 
-        antiFlash.setAlpha(Float.parseFloat(this.alpha.getText().replaceAll("\\D", "")));
+        this.antiFlash.setAlpha(Float.parseFloat(this.alpha.getText().replaceAll("\\D", "")));
     }
 }

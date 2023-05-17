@@ -7,8 +7,12 @@ import pl.trayz.cheats.overlay.Overlay;
 
 public class GlobalKeyListener implements NativeKeyListener {
 
+    public static int lastKey = -1;
+
     @Override
     public void nativeKeyPressed(NativeKeyEvent event) {
+        lastKey = event.getKeyCode();
+
         TrayzWare.getInstance().getModifications().forEach(mod -> mod.keyPressed(event));
 
         if (event.getKeyCode() == 3666) {

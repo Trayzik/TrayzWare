@@ -29,34 +29,31 @@ public class ChamsController implements Initializable {
     @FXML
     private CheckBox glowTeam;
 
+    private final Configuration configuration = TrayzWare.getInstance().getConfiguration();
+    private final Configuration.Chams chams = this.configuration.getChams();
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Configuration configuration = TrayzWare.getInstance().getConfiguration();
-        Configuration.Chams chams = configuration.getChams();
+        java.awt.Color colorEnemy = this.chams.getEnemyColor().getColor();
+        java.awt.Color colorTeam = this.chams.getTeammateColor().getColor();
 
-        java.awt.Color colorEnemy = chams.getEnemyColor().getColor();
-        java.awt.Color colorTeam = chams.getTeammateColor().getColor();
-
-        this.enabled.setSelected(configuration.getEnabledMods().contains("glow"));
+        this.enabled.setSelected(this.configuration.getEnabledMods().contains("glow"));
         this.colorEnemy.setValue(Color.rgb(colorEnemy.getRed(),colorEnemy.getGreen(),colorEnemy.getBlue()));
         this.colorTeam.setValue(Color.rgb(colorTeam.getRed(),colorTeam.getGreen(),colorTeam.getBlue()));
-        this.glowEnemy.setSelected(chams.isChamsOnEnemy());
-        this.glowTeam.setSelected(chams.isChamsOnTeammate());
+        this.glowEnemy.setSelected(this.chams.isChamsOnEnemy());
+        this.glowTeam.setSelected(this.chams.isChamsOnTeammate());
     }
 
     public void onAction() {
-        Configuration configuration = TrayzWare.getInstance().getConfiguration();
-        Configuration.Chams chams = configuration.getChams();
-
         if(!this.enabled.isSelected()) {
-            configuration.getEnabledMods().remove("chams");
+            this.configuration.getEnabledMods().remove("chams");
         }else {
-            configuration.getEnabledMods().add("chams");
+            this.configuration.getEnabledMods().add("chams");
         }
 
-        chams.setEnemyColor(new ColorUtil(new java.awt.Color((int) (this.colorEnemy.getValue().getRed() * 255), (int) (this.colorEnemy.getValue().getGreen() * 255), (int) (this.colorEnemy.getValue().getBlue() * 255))));
-        chams.setTeammateColor(new ColorUtil(new java.awt.Color((int) (this.colorTeam.getValue().getRed() * 255), (int) (this.colorTeam.getValue().getGreen() * 255), (int) (this.colorTeam.getValue().getBlue() * 255))));
-        chams.setChamsOnEnemy(this.glowEnemy.isSelected());
-        chams.setChamsOnTeammate(this.glowTeam.isSelected());
+        this.chams.setEnemyColor(new ColorUtil(new java.awt.Color((int) (this.colorEnemy.getValue().getRed() * 255), (int) (this.colorEnemy.getValue().getGreen() * 255), (int) (this.colorEnemy.getValue().getBlue() * 255))));
+        this.chams.setTeammateColor(new ColorUtil(new java.awt.Color((int) (this.colorTeam.getValue().getRed() * 255), (int) (this.colorTeam.getValue().getGreen() * 255), (int) (this.colorTeam.getValue().getBlue() * 255))));
+        this.chams.setChamsOnEnemy(this.glowEnemy.isSelected());
+        this.chams.setChamsOnTeammate(this.glowTeam.isSelected());
     }
 }

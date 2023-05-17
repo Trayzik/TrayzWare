@@ -17,7 +17,7 @@
         </Label>
     </Pane>
    <CheckBox fx:id="enabled" layoutX="14.0" layoutY="57.0" mnemonicParsing="false" onAction="#onAction" prefHeight="27.0" prefWidth="79.0" text="Enabled" />
-   <TextField fx:id="bind" layoutX="14.0" layoutY="116.0" onKeyTyped="#onAction" prefHeight="25.0" prefWidth="115.0" />
+   <TextField fx:id="bind" layoutX="14.0" layoutY="116.0" onKeyReleased="#bindAction" prefHeight="25.0" prefWidth="115.0" />
    <Label layoutX="14.0" layoutY="89.0" prefHeight="13.0" prefWidth="92.0" text="Bind" textFill="#e7e5e5">
       <font>
          <Font name="System Bold" size="18.0" />

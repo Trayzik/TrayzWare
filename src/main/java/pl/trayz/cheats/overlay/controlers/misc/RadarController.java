@@ -18,20 +18,18 @@ public class RadarController implements Initializable {
     @FXML
     private CheckBox enabled;
 
+    private final Configuration configuration = TrayzWare.getInstance().getConfiguration();
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Configuration configuration = TrayzWare.getInstance().getConfiguration();
-
-        this.enabled.setSelected(configuration.getEnabledMods().contains("radar"));
+        this.enabled.setSelected(this.configuration.getEnabledMods().contains("radar"));
     }
 
     public void onAction() {
-        Configuration configuration = TrayzWare.getInstance().getConfiguration();
-
         if(!this.enabled.isSelected()) {
-            configuration.getEnabledMods().remove("radar");
+            this.configuration.getEnabledMods().remove("radar");
         }else {
-            configuration.getEnabledMods().add("radar");
+            this.configuration.getEnabledMods().add("radar");
         }
     }
 }
