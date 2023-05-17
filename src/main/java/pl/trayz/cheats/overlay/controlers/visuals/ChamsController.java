@@ -37,7 +37,7 @@ public class ChamsController implements Initializable {
         java.awt.Color colorEnemy = this.chams.getEnemyColor().getColor();
         java.awt.Color colorTeam = this.chams.getTeammateColor().getColor();
 
-        this.enabled.setSelected(this.configuration.getEnabledMods().contains("glow"));
+        this.enabled.setSelected(this.configuration.getEnabledMods().contains("chams"));
         this.colorEnemy.setValue(Color.rgb(colorEnemy.getRed(),colorEnemy.getGreen(),colorEnemy.getBlue()));
         this.colorTeam.setValue(Color.rgb(colorTeam.getRed(),colorTeam.getGreen(),colorTeam.getBlue()));
         this.glowEnemy.setSelected(this.chams.isChamsOnEnemy());
