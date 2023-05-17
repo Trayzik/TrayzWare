@@ -7,7 +7,7 @@ import pl.trayz.cheats.mods.api.Modification;
 import pl.trayz.cheats.objects.entity.BonesPosition;
 import pl.trayz.cheats.objects.entity.Entity;
 import pl.trayz.cheats.objects.entity.LocalPlayer;
-import pl.trayz.cheats.utils.MathHelper;
+import pl.trayz.cheats.utils.MathUtil;
 import pl.trayz.cheats.utils.Utils;
 import pl.trayz.cheats.utils.vec.Vec2f;
 import pl.trayz.cheats.utils.vec.Vec3f;
@@ -50,10 +50,10 @@ public class AimbotMod extends Modification {
         Vec2f angles = new Vec2f(0, 0);
         Vec3f myPos = entity.getPosition().add(entity.getViewOffset());
         Vec3f targetPos = bone.equals(Bone.HEAD) ? bonesPosition.getHeadPos() : bone.equals(Bone.NECK) ? bonesPosition.getNeckPos() : bone.equals(Bone.CHEST) ? bonesPosition.getBodyPos() : bone.equals(Bone.PELVIS) ? bonesPosition.getPelvisPos() : bonesPosition.getLegsPos();
-        MathHelper.calcAngles(myPos, targetPos, angles);
+        MathUtil.calcAngles(myPos, targetPos, angles);
 
-        float diffYaw = MathHelper.differenceBetweenAngles(currentAngles.x, angles.x);
-        float diffPitch = MathHelper.differenceBetweenAngles(currentAngles.y, angles.y);
+        float diffYaw = MathUtil.differenceBetweenAngles(currentAngles.x, angles.x);
+        float diffPitch = MathUtil.differenceBetweenAngles(currentAngles.y, angles.y);
         float distanceFromCrosshair = (float)Math.sqrt(diffYaw*diffYaw + diffPitch*diffPitch);
 
         if (angles.isValid() && distanceFromCrosshair < configuration().getAimbot().getFov())

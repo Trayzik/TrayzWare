@@ -5,6 +5,7 @@ import lombok.SneakyThrows;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Map;
 
@@ -29,8 +30,7 @@ public class WebsiteUtil {
             }
         }
         InputStream crunchifyStream = crunchifyHttp.getInputStream();
-        String crunchifyResponse = crunchifyGetStringFromStream(crunchifyStream);
-        return crunchifyResponse;
+        return crunchifyGetStringFromStream(crunchifyStream);
     }
 
 
@@ -40,14 +40,12 @@ public class WebsiteUtil {
             Writer crunchifyWriter = new StringWriter();
 
             char[] crunchifyBuffer = new char[2048];
-            try {
-                Reader crunchifyReader = new BufferedReader(new InputStreamReader(crunchifyStream, "UTF-8"));
+            try (crunchifyStream) {
+                Reader crunchifyReader = new BufferedReader(new InputStreamReader(crunchifyStream, StandardCharsets.UTF_8));
                 int counter;
                 while ((counter = crunchifyReader.read(crunchifyBuffer)) != -1) {
                     crunchifyWriter.write(crunchifyBuffer, 0, counter);
                 }
-            } finally {
-                crunchifyStream.close();
             }
             return crunchifyWriter.toString();
         } else {

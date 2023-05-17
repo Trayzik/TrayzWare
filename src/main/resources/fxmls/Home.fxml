@@ -1,8 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0"
-            prefWidth="793.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/16"
-            xmlns:fx="http://javafx.com/fxml/1">
-    <Pane prefHeight="554.0" prefWidth="793.0"/>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="793.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.trayz.cheats.overlay.controlers.HomeController">
+    <Pane prefHeight="554.0" prefWidth="793.0">
+       <Pane layoutX="48.0" layoutY="107.0" prefHeight="394.0" prefWidth="697.0" style="-fx-background-color: #05071F;">
+          <Label fx:id="welcome" layoutX="175.0" layoutY="14.0" prefHeight="54.0" prefWidth="523.0" text="Welcome, User!" textFill="#28c925">
+             <font>
+                <Font name="Arial Black" size="36.0" />
+             </font>
+          </Label>
+          <Label layoutX="36.0" layoutY="83.0" prefHeight="36.0" prefWidth="124.0" text="Github:" textFill="#7cb928">
+             <font>
+                <Font size="20.0" />
+             </font>
+          </Label>
+          <Label layoutX="175.0" layoutY="83.0" onMouseClicked="#githubButton" prefHeight="36.0" prefWidth="237.0" text="https://github.com/Trayzik" textFill="#659028">
+             <font>
+                <Font size="20.0" />
+             </font>
+          </Label>
+          <Label layoutX="36.0" layoutY="119.0" prefHeight="36.0" prefWidth="124.0" text="Version:" textFill="#7cb928">
+             <font>
+                <Font size="20.0" />
+             </font>
+          </Label>
+          <Label layoutX="175.0" layoutY="119.0" prefHeight="36.0" prefWidth="237.0" text="1.0" textFill="#659028">
+             <font>
+                <Font size="20.0" />
+             </font>
+          </Label>
+          <Label layoutX="36.0" layoutY="155.0" prefHeight="36.0" prefWidth="124.0" text="Author:" textFill="#7cb928">
+             <font>
+                <Font size="20.0" />
+             </font>
+          </Label>
+          <Label layoutX="175.0" layoutY="155.0" prefHeight="36.0" prefWidth="237.0" text="Trayz" textFill="#659028">
+             <font>
+                <Font size="20.0" />
+             </font>
+          </Label>
+       </Pane>
+    </Pane>
 </AnchorPane>

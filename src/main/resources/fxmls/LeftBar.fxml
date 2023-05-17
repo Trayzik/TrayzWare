@@ -21,9 +21,7 @@
         <Button fx:id="btnHome" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="42.0" prefWidth="259.0" stylesheets="@../styles.css" text="Home" textFill="#e7e5e5">
             <graphic>
                 <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../images/icon_home.png" />
-                    </image>
+                    <Image url="@../images/icon_home.png" />
                 </ImageView>
             </graphic>
             <opaqueInsets>
@@ -39,33 +37,27 @@
         <Button fx:id="btnCombat" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="42.0" prefWidth="259.0" stylesheets="@../styles.css" text="Combat">
             <graphic>
                 <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../images/icon_combat.png" />
-                    </image>
+                    <Image url="@../images/icon_combat.png" />
                 </ImageView>
             </graphic>
             <padding>
                 <Insets left="50.0" />
             </padding>
         </Button>
-        <Button fx:id="btnVisuals" onAction="#buttonClick" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../styles.css" text="Visuals">
+        <Button fx:id="btnVisuals" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="42.0" prefWidth="259.0" stylesheets="@../styles.css" text="Visuals">
             <graphic>
                 <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../images/icon_visuals.png" />
-                    </image>
+                    <Image url="@../images/icon_visuals.png" />
                 </ImageView>
             </graphic>
             <padding>
                 <Insets left="50.0" />
             </padding>
         </Button>
-        <Button fx:id="btnMisc" onAction="#buttonClick" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../styles.css" text="Misc">
+        <Button fx:id="btnMisc" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="42.0" prefWidth="259.0" stylesheets="@../styles.css" text="Misc">
             <graphic>
                 <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../images/icon_misc.png" />
-                    </image>
+                    <Image url="@../images/icon_misc.png" />
                 </ImageView>
             </graphic>
             <padding>
@@ -75,21 +67,17 @@
         <Button fx:id="btnSkinChanger" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="42.0" prefWidth="259.0" stylesheets="@../styles.css" text="SkinChanger">
             <graphic>
                 <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../images/icon_skinchanger.png" />
-                    </image>
+                    <Image url="@../images/icon_skinchanger.png" />
                 </ImageView>
             </graphic>
             <padding>
                 <Insets left="50.0" />
             </padding>
         </Button>
-        <Button fx:id="btnPlayers" onAction="#buttonClick" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../styles.css" text="Players">
+        <Button fx:id="btnPlayers" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="42.0" prefWidth="259.0" stylesheets="@../styles.css" text="Players">
             <graphic>
                 <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../images/icon_players.png" />
-                    </image>
+                    <Image url="@../images/icon_players.png" />
                 </ImageView>
             </graphic>
             <padding>
@@ -99,26 +87,18 @@
         <Button fx:id="btnConfig" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="42.0" prefWidth="259.0" stylesheets="@../styles.css" text="Config">
             <graphic>
                 <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../images/icon_config.png" />
-                    </image>
+                    <Image url="@../images/icon_config.png" />
                 </ImageView>
             </graphic>
             <padding>
                 <Insets left="50.0" />
             </padding>
         </Button>
-        <Button fx:id="btnAccount" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@../styles.css" text="Account">
-            <graphic>
-                <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../images/icon_account.png" />
-                    </image>
-                </ImageView>
-            </graphic>
-            <padding>
-                <Insets left="50.0" />
-            </padding>
-        </Button>
+      <VBox prefHeight="40.0" prefWidth="256.0" />
+        <Pane prefHeight="61.0" prefWidth="256.0">
+            <ImageView fitHeight="42.0" fitWidth="41.0" layoutX="108.0" layoutY="10.0" onMouseClicked="#githubButton" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../images/icon_github.png" />
+            </ImageView>
+        </Pane>
     </VBox>
 </AnchorPane>

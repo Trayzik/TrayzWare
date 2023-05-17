@@ -44,8 +44,8 @@ public class Utils {
         Vec2f center = new Vec2f((float) (Overlay.primaryStage.getScene().getWidth()/2), (float) (Overlay.primaryStage.getScene().getHeight()/2));
 
         return TrayzWare.getInstance().getEntityManager().getEntities().stream().filter(entity -> !entity.equals(localPlayer) && !entity.getTeam().equals(localPlayer.getTeam()) && entity.getHealth() > 0).min((o1, o2) -> {
-            float dist1 = MathHelper.distanceBetweenPoints(center,toScreen(o1.getBonesPosition().getBodyPos()));
-            float dist2 = MathHelper.distanceBetweenPoints(center,toScreen(o2.getBonesPosition().getBodyPos()));
+            float dist1 = MathUtil.distanceBetweenPoints(center,toScreen(o1.getBonesPosition().getBodyPos()));
+            float dist2 = MathUtil.distanceBetweenPoints(center,toScreen(o2.getBonesPosition().getBodyPos()));
 
             return Float.compare(dist1,dist2);
         }).orElse(null);

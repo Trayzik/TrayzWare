@@ -39,7 +39,7 @@ public class Configuration {
     public Configuration() {
         this.enabledMods = new CopyOnWriteArrayList<>();
         this.antiFlash = new AntiFlash(0f);
-        this.glow = new Glow(new ColorUtil(Color.WHITE),new ColorUtil(Color.GREEN),true,true);
+        this.glow = new Glow(new ColorUtil(Color.RED),new ColorUtil(Color.GREEN),true,true);
         this.esp = new Esp(new ColorUtil(Color.WHITE),true, 3);
         this.chams = new Chams(new ColorUtil(Color.RED),new ColorUtil(Color.GREEN),true,false);
         this.aimbot = new Aimbot(50,5,56,Bone.HEAD);

@@ -10,7 +10,7 @@
     <children>
         <ImageView fitHeight="31.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../images/icons8_GPS_Antenna_64px_1.png" />
+                <Image url="@../../images/icon_antenna.png" />
             </image>
             <HBox.margin>
                 <Insets left="10.0" />

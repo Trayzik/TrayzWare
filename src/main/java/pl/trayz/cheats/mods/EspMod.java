@@ -28,7 +28,6 @@ public class EspMod extends Modification {
         super("Esp", "See enemies through walls");
     }
 
-    //todo: fix this
     @Override
     public void tick() {
         LocalPlayer localPlayer = TrayzWare.getInstance().getEntityManager().getLocalPlayer();

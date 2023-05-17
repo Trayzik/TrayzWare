@@ -5,7 +5,6 @@ import com.github.jonatino.process.Module;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-import pl.trayz.cheats.TrayzWare;
 import pl.trayz.cheats.objects.memory.Pointer;
 
 @Getter@Setter@AllArgsConstructor

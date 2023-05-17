@@ -3,7 +3,7 @@ package pl.trayz.cheats.utils;
 import pl.trayz.cheats.utils.vec.Vec2f;
 import pl.trayz.cheats.utils.vec.Vec3f;
 
-public class MathHelper {
+public class MathUtil {
 
     public static float clamp(float val, float min, float max) {
         if (val < min) return min;
@@ -46,7 +46,7 @@ public class MathHelper {
             angles.y += 180.0f;
         }
 
-        angles.x = MathHelper.clamp(MathHelper.normalizeAngle(angles.x), -89f, 89f);
-        angles.y = MathHelper.normalizeAngle(angles.y);
+        angles.x = MathUtil.clamp(MathUtil.normalizeAngle(angles.x), -89f, 89f);
+        angles.y = MathUtil.normalizeAngle(angles.y);
     }
 }

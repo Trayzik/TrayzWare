@@ -7,8 +7,6 @@ import pl.trayz.cheats.objects.entity.LocalPlayer;
 import pl.trayz.cheats.objects.memory.Pointer;
 import pl.trayz.cheats.objects.offsets.OffsetsManager;
 
-import java.awt.*;
-
 /**
  * @Author: Trayz
  **/

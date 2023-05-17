@@ -1,16 +1,10 @@
 package pl.trayz.cheats.mods;
 
-import org.jnativehook.keyboard.NativeKeyEvent;
 import pl.trayz.cheats.TrayzWare;
-import pl.trayz.cheats.enums.Bone;
 import pl.trayz.cheats.mods.api.Modification;
-import pl.trayz.cheats.objects.entity.BonesPosition;
-import pl.trayz.cheats.objects.entity.Entity;
 import pl.trayz.cheats.objects.entity.LocalPlayer;
-import pl.trayz.cheats.utils.MathHelper;
-import pl.trayz.cheats.utils.Utils;
+import pl.trayz.cheats.utils.MathUtil;
 import pl.trayz.cheats.utils.vec.Vec2f;
-import pl.trayz.cheats.utils.vec.Vec3f;
 
 /**
  * @Author: Trayz
@@ -40,7 +34,7 @@ public class RcsMod extends Modification {
 
         this.oldViewAngles = punchAngles;
 
-        if(angles.isValid() && MathHelper.checkAngles(angles))
+        if(angles.isValid() && MathUtil.checkAngles(angles))
             entity.writeViewAngles(angles);
 
     }

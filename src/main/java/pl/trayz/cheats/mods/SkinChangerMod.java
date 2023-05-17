@@ -13,10 +13,6 @@ import pl.trayz.cheats.objects.skinchanger.SkinChangerElement;
  * @Author: Trayz
  **/
 
-/*
- Detected by VAC
- DON"T USE IT!!!!!
- */
 public class SkinChangerMod extends Modification {
 
     public SkinChangerMod() {

@@ -9,8 +9,8 @@ import javafx.scene.layout.Pane;
 import lombok.Getter;
 import lombok.SneakyThrows;
 
-import java.io.File;
-import java.io.IOException;
+import java.awt.*;
+import java.net.URI;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -75,6 +75,11 @@ public class LayoutController implements Initializable {
         }else if(source.equals(btnPlayers)) {
             loadPage("/fxmls/players/Players.fxml");
         }
+    }
+
+    @SneakyThrows
+    public void githubButton() {
+        Desktop.getDesktop().browse(URI.create("https://github.com/Trayzik"));
     }
 
     @SneakyThrows
